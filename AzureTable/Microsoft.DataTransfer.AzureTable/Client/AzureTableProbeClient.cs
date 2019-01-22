@@ -25,9 +25,9 @@ namespace Microsoft.DataTransfer.AzureTable.Client
             var client = CloudStorageAccount.Parse(connectionString).CreateCloudTableClient();
             client.DefaultRequestOptions.LocationMode = AzureTableClientHelper.ToSdkLocationMode(locationMode);
 
-            var properties = await client.GetServicePropertiesAsync();
-            if (properties == null)
-                throw Errors.EmptyResponseReceived();
+            //var properties = await client.GetServicePropertiesAsync();
+            //if (properties == null)
+            //    throw Errors.EmptyResponseReceived();
         }
     }
 }
